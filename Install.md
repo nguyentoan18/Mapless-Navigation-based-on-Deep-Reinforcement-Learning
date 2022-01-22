@@ -15,13 +15,13 @@ git clone git clone https://bitbucket.org/theconstructcore/turtlebot.git
 cd ~/catkin_ws && catkin_make
 ```
 ### 2.2. Turtlebot2 urdf
-- Modify the .urdf.xacro file in catkin_ws/src/turtlebot/kobuki_description/urdf for robot plugins (sensors, ...), my urdf is available [here](./src/turtlebot/kobuki_description/urdf)
+- Modify the .urdf.xacro file in catkin_ws/src/turtlebot/kobuki_description/urdf for robot plugins (sensors, ...), my urdf is available [here](./src/turtlebot/kobuki_description/urdf/kobuki_gazebo.urdf.xacro)
  
 ### 2.3.  Worlds and launch files 
 - Create worlds by Gazebo and save as .world files
 - Add .world files in git to /catkin_ws/src/turtlebot/turtlebot_navigation_gazebo/worlds
 - Add .launch files in git to /catkin_ws/src/turtlebot/turtlebot_navigation_gazebo/launch
-- My world and launch files are available [here](./src/turtlebot/turtlebot_navigation_gazebo/worlds) and [here](./src/turtlebot/turtlebot_navigation_gazebo/worlds)
+- My world and launch files are available [here](./src/turtlebot/turtlebot_navigation_gazebo/worlds/irl_test4.world) and [here](./src/turtlebot/turtlebot_navigation_gazebo/launch/main.launch)
 
 ## 3. Server setups
 ### 3.1. Python for ROS (Python 3.6)
@@ -80,7 +80,7 @@ roslaunch turtlebot_navigation_gazebo main.launch
 ```
 roslaunch turtlebot_navigation_gazebo main.launch
 ```
-_**Note**_: In the main.launch file,  change the name of the training world file to the testing world (irl_test7.world)
+_**Note**_: In the [main.launch](./src/turtlebot/turtlebot_navigation_gazebo/launch/main.launch) file,  change the name of the training world file to the testing world (irl_test7.world)
 ### 4.2. Initialize the training file
 - Second run, in the other client’s terminal:
 ```
@@ -88,7 +88,7 @@ source ~/catkin_ws/devel/setup.bash
 roslaunch turtle2_openai_ros_example ppo_actor_critic_train.launch
 ```	
 ### 4.3.  Convert  training to testing
-- Step1: In the training file, change agent.run_batch(), line 557 to agent.test(), line 559 for training_to_testing conversion.
+- Step1: In the [training file](./src/turtle2_openai_ros_example/scripts/ppo_actor_critic_train.py), change agent.run_batch(), line 557 to agent.test(), line 559 for training_to_testing conversion.
 - Step2: Choose number of  test_episode in line 520
 - Step3: roslaunch turtle2_openai_ros_example ppo_actor_critic_train.launch
  
@@ -97,7 +97,7 @@ _**Note**_:  Specify the directory to save the trained_model file ( /.ros/Models
 ### 4.4.  Make the random goal point in the training/testing environment
  
 - Step1: Limit x,y coordinates depending on training/testing environment
-In the turtlebot2_wall.py, change range of x coordinate of training environment (irl_test4, line 132) to testing environment (irl_test7, line 134). Similar with y coordinate, training environment (irl_test4, line 142) to testing environment (irl_test7, line 144).
+In the [turtlebot2_wall.py](./src/openai_ros/openai_ros/src/openai_ros/task_envs/turtlebot2/turtlebot2_wall.py), change range of x coordinate of training environment (irl_test4, line 132) to testing environment (irl_test7, line 134). Similar with y coordinate, training environment (irl_test4, line 142) to testing environment (irl_test7, line 144).
 - Step2: If the target point coordinates coincide with the wall or obstacle coordinates, convert the destination point position to a given location. In the turtlebot2_wall.py:
 	+ For training environment, irl_test4 (line 172 to line 202).
 	+ For testing environment , irl_tets7 (line 206 to line 260)
