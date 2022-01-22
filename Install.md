@@ -1,12 +1,12 @@
 # Installation
  
-## Software setup
+## 1. Software setup
 - Install ROS Kinetic (for Ubuntu 16.04)
 - Install Gazebo9
 - Install gazebo_ros package
 - Install openai_ros package
  
-## Client setups (Gazebo GUI, turtlebot2)
+## 2. Client setups (Gazebo GUI, turtlebot2)
 ### 2.1. Install turtlebot2 simulation
 - Install turtlebot2 and turtlebot2 simulation
 ```
@@ -23,7 +23,7 @@ cd ~/catkin_ws && catkin_make
 - Add .launch files in git to /catkin_ws/src/turtlebot/turtlebot_navigation_gazebo/launch
 - My world and launch files are available [here](./src/turtlebot/turtlebot_navigation_gazebo/worlds) and [here](./src/turtlebot/turtlebot_navigation_gazebo/worlds)
 
-## Server setups
+## 3. Server setups
 ### 3.1. Python for ROS (Python 3.6)
 - Install pyyaml:
 ```
@@ -66,7 +66,7 @@ pip install -e .
 ```
 pip install --user gym
 ```
-## Training and evaluation
+## 4. Training and evaluation
 ### 4.1. Initialize the Gazebo environment for training
 - First run, in the client's terminal:
 ``` 
