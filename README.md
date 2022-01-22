@@ -21,10 +21,6 @@ _**Note:**_ Read and understand about the openai_ros  before implementation
 ## Installation
 This repo contains the [trained models](./src/Trained_model) to perform like the result above. See the [installation](Install.md) for more information.
 
-## Some Suggestions for The Next Plan
-- Transform the simulation environment to the real environment
-- Generate desired destination sequence instead of choosing random
-
 ## Reference
 - Idea:
   - https://arxiv.org/pdf/1703.00420.pdf
