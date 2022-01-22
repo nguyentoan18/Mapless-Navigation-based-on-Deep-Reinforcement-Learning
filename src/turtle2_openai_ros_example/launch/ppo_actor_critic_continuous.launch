@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <!-- This version uses the openai_ros environments -->
+    <rosparam command="load" file="$(find turtle2_openai_ros_example)/config/ppo_actor_critic_train.yaml" />
+    <!-- Launch the training system -->
+    <node pkg="turtle2_openai_ros_example" name="turtlebot2_wall_qlearn" type="ppo_actor_critic_continuous.py" output="screen"/>
+    <node pkg="path_marker" name="trajectory_interactive_markers_node" type="marker.py" output="screen"/>
+</launch>

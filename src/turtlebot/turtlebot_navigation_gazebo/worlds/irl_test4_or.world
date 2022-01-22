@@ -1,0 +1,2459 @@
+<sdf version='1.6'>
+  <world name='default'>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose frame=''>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.5 -1</direction>
+    </light>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+    </model>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <physics name='default_physics' default='0' type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <model name='irl_test5'>
+      <pose frame=''>3.88601 2.23861 0 0 -0 0</pose>
+      <link name='Wall_12'>
+        <collision name='Wall_12_Collision'>
+          <geometry>
+            <box>
+              <size>11.75 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_12_Visual'>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>11.75 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+        </visual>
+        <pose frame=''>-5.05 2.125 0 0 -0 1.5708</pose>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <link name='Wall_13'>
+        <collision name='Wall_13_Collision'>
+          <geometry>
+            <box>
+              <size>10.25 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_13_Visual'>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>10.25 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+        </visual>
+        <pose frame=''>0 7.925 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <link name='Wall_14'>
+        <collision name='Wall_14_Collision'>
+          <geometry>
+            <box>
+              <size>16 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_14_Visual'>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>16 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+        </visual>
+        <pose frame=''>5.05 0 0 0 0 -1.5708</pose>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <link name='Wall_15'>
+        <collision name='Wall_15_Collision'>
+          <geometry>
+            <box>
+              <size>10.25 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_15_Visual'>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>10.25 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+        </visual>
+        <pose frame=''>0 -7.925 0 0 -0 3.14159</pose>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <link name='Wall_16'>
+        <collision name='Wall_16_Collision'>
+          <geometry>
+            <box>
+              <size>4.25 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_16_Visual'>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>4.25 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+        </visual>
+        <pose frame=''>-5.05 -5.875 0 0 -0 1.5708</pose>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <link name='Wall_18'>
+        <collision name='Wall_18_Collision'>
+          <geometry>
+            <box>
+              <size>2 0.15 1.5</size>
+            </box>
+          </geometry>
+          <pose frame=''>0 0 0.75 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_18_Visual'>
+          <pose frame=''>0 0 0.75 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>2 0.15 1.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/CeilingTiled</name>
+            </script>
+            <ambient>0.921569 0.807843 0.615686 1</ambient>
+          </material>
+        </visual>
+        <pose frame=''>-1.80401 3.98339 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <link name='Wall_20'>
+        <collision name='Wall_20_Collision'>
+          <geometry>
+            <box>
+              <size>2 0.15 1.5</size>
+            </box>
+          </geometry>
+          <pose frame=''>0 0 0.75 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_20_Visual'>
+          <pose frame=''>0 0 0.75 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>2 0.15 1.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/CeilingTiled</name>
+            </script>
+            <ambient>0.921569 0.807843 0.615686 1</ambient>
+          </material>
+        </visual>
+        <pose frame=''>-1.8014 3.95535 0 0 0 -1.5708</pose>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <link name='Wall_22'>
+        <collision name='Wall_22_Collision'>
+          <geometry>
+            <box>
+              <size>3 0.15 1.5</size>
+            </box>
+          </geometry>
+          <pose frame=''>0 0 0.75 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_22_Visual'>
+          <pose frame=''>0 0 0.75 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>3 0.15 1.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/CeilingTiled</name>
+            </script>
+            <ambient>0.996078 0.47451 0.0196078 1</ambient>
+          </material>
+        </visual>
+        <pose frame=''>1.67999 -6.24561 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <link name='Wall_23'>
+        <collision name='Wall_23_Collision'>
+          <geometry>
+            <box>
+              <size>4.75 0.15 1.5</size>
+            </box>
+          </geometry>
+          <pose frame=''>0 0 0.75 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_23_Visual'>
+          <pose frame=''>0 0 0.75 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>4.75 0.15 1.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/CeilingTiled</name>
+            </script>
+            <ambient>0.996078 0.47451 0.0196078 1</ambient>
+          </material>
+        </visual>
+        <pose frame=''>3.10499 -3.94561 0 0 -0 1.5708</pose>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <link name='Wall_25'>
+        <collision name='Wall_25_Collision'>
+          <geometry>
+            <box>
+              <size>3 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_25_Visual'>
+          <pose frame=''>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>3 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+        </visual>
+        <pose frame=''>3.5999 1.41476 0 0 -0 3.14159</pose>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <static>1</static>
+    </model>
+    <model name='table_breakfast'>
+      <link name='link_26'>
+        <pose frame=''>-5.69 -5.6 0 0 -0 0</pose>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://table_breakfast/meshes/table3.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <lighting>1</lighting>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.01 0.01 0.01 1</specular>
+            <emissive>0 0 0 1</emissive>
+            <shader type='vertex'>
+              <normal_map>__default__</normal_map>
+            </shader>
+          </material>
+          <cast_shadows>1</cast_shadows>
+          <transparency>0</transparency>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://table_breakfast/meshes/table3.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <static>1</static>
+      <allow_auto_disable>1</allow_auto_disable>
+      <pose frame=''>5.93959 6.9347 0 0 -0 0</pose>
+    </model>
+    <model name='side_table_set_2'>
+      <link name='link_25'>
+        <pose frame=''>0.894224 -0.796632 -0.029004 0 -0 0</pose>
+        <visual name='visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://side_table_set_2/meshes/table_small_full.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <lighting>1</lighting>
+            <ambient>0.6 0.6 0.6 1</ambient>
+            <diffuse>0.7 0.7 0.7 1</diffuse>
+            <specular>0.01 0.01 0.01 1</specular>
+            <emissive>0 0 0 1</emissive>
+          </material>
+          <cast_shadows>1</cast_shadows>
+          <transparency>0</transparency>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://side_table_set_2/meshes/table_small_full.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <static>1</static>
+      <allow_auto_disable>1</allow_auto_disable>
+      <pose frame=''>5.98475 6.00013 0 0 -0 0</pose>
+    </model>
+    <model name='side_table_set_2_0'>
+      <link name='link_25'>
+        <pose frame=''>0.894224 -0.796632 -0.029004 0 -0 0</pose>
+        <visual name='visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://side_table_set_2/meshes/table_small_full.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <lighting>1</lighting>
+            <ambient>0.6 0.6 0.6 1</ambient>
+            <diffuse>0.7 0.7 0.7 1</diffuse>
+            <specular>0.01 0.01 0.01 1</specular>
+            <emissive>0 0 0 1</emissive>
+          </material>
+          <cast_shadows>1</cast_shadows>
+          <transparency>0</transparency>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://side_table_set_2/meshes/table_small_full.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <static>1</static>
+      <allow_auto_disable>1</allow_auto_disable>
+      <pose frame=''>5.98224 8.06179 0 0 -0 0</pose>
+    </model>
+    <model name='side_table_set_2_1'>
+      <link name='link_25'>
+        <pose frame=''>0.894224 -0.796632 -0.029004 0 -0 0</pose>
+        <visual name='visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://side_table_set_2/meshes/table_small_full.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <lighting>1</lighting>
+            <ambient>0.6 0.6 0.6 1</ambient>
+            <diffuse>0.7 0.7 0.7 1</diffuse>
+            <specular>0.01 0.01 0.01 1</specular>
+            <emissive>0 0 0 1</emissive>
+          </material>
+          <cast_shadows>1</cast_shadows>
+          <transparency>0</transparency>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://side_table_set_2/meshes/table_small_full.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <static>1</static>
+      <allow_auto_disable>1</allow_auto_disable>
+      <pose frame=''>7.08704 6.97672 0 0 -0 0</pose>
+    </model>
+    <model name='side_table_set_2_2'>
+      <link name='link_25'>
+        <pose frame=''>0.894224 -0.796632 -0.029004 0 -0 0</pose>
+        <visual name='visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://side_table_set_2/meshes/table_small_full.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <lighting>1</lighting>
+            <ambient>0.6 0.6 0.6 1</ambient>
+            <diffuse>0.7 0.7 0.7 1</diffuse>
+            <specular>0.01 0.01 0.01 1</specular>
+            <emissive>0 0 0 1</emissive>
+          </material>
+          <cast_shadows>1</cast_shadows>
+          <transparency>0</transparency>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://side_table_set_2/meshes/table_small_full.dae</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <static>1</static>
+      <allow_auto_disable>1</allow_auto_disable>
+      <pose frame=''>4.92676 6.99377 0 0 -0 0</pose>
+    </model>
+    <state world_name='default'>
+      <sim_time>1165 223000000</sim_time>
+      <real_time>1168 872309809</real_time>
+      <wall_time>1606443608 80078793</wall_time>
+      <iterations>1165223</iterations>
+      <model name='ground_plane'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='irl_test5'>
+        <pose frame=''>3.88601 2.23861 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='Wall_12'>
+          <pose frame=''>-1.16399 4.36361 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Wall_13'>
+          <pose frame=''>3.88601 10.1636 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Wall_14'>
+          <pose frame=''>8.93601 2.23861 0 0 0 -1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Wall_15'>
+          <pose frame=''>3.88601 -5.68639 0 0 -0 3.14159</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Wall_16'>
+          <pose frame=''>-1.16399 -3.63639 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Wall_18'>
+          <pose frame=''>2.082 6.222 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Wall_20'>
+          <pose frame=''>2.08461 6.19396 0 0 0 -1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Wall_22'>
+          <pose frame=''>5.566 -4.007 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Wall_23'>
+          <pose frame=''>6.991 -1.707 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Wall_25'>
+          <pose frame=''>7.48591 3.65337 0 0 -0 3.14159</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='side_table_set_2'>
+        <pose frame=''>5.98475 6.00013 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link_25'>
+          <pose frame=''>6.87897 5.2035 -0.029004 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='side_table_set_2_0'>
+        <pose frame=''>5.98224 8.06179 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link_25'>
+          <pose frame=''>6.87646 7.26516 -0.029004 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='side_table_set_2_1'>
+        <pose frame=''>7.08704 6.97672 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link_25'>
+          <pose frame=''>7.98126 6.18009 -0.029004 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='side_table_set_2_2'>
+        <pose frame=''>4.92676 6.99377 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link_25'>
+          <pose frame=''>5.82098 6.19714 -0.029004 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='table_breakfast'>
+        <pose frame=''>5.93959 6.9347 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link_26'>
+          <pose frame=''>0.24959 1.3347 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose frame=''>0 0 10 0 -0 0</pose>
+      </light>
+    </state>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose frame=''>6.21648 -11.0852 21.8279 0 1.0178 1.58824</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+
+<model name="human_1_collision_model">
+  <pose>0 0 -100 0 0 0</pose>
+  <static>true</static>
+  <link name="link">
+    <collision name="link">
+      <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+      <geometry>
+        <box>
+          <size>0.44 1.62 0.60</size>
+        </box>
+      </geometry>
+    </collision>
+  </link>
+</model>
+
+
+
+<actor name="human_1">
+
+  <!-- Starting pose, nice for when the world is reset -->
+  <pose>
+    7.6
+    9.0
+    1.0
+    1.570796
+    -0.0
+    3.141593
+  </pose>
+
+  <skin>
+    <filename>model://actor/meshes/SKIN_man_green_shirt.dae</filename>
+  </skin>
+
+  <animation name="walking">
+    <filename>model://actor/meshes/ANIMATION_walking.dae</filename>
+    <interpolate_x>true</interpolate_x>
+  </animation>
+
+ <script>
+      <trajectory id="1" type="walking">
+        <waypoint>
+          <time>0</time>
+          <pose>7.5 9 0 0 0 3.14</pose>
+        </waypoint>
+        <waypoint>
+          <time>5</time>
+          <pose>0.5 9 0 0 0 3.14</pose>
+        </waypoint>
+        <waypoint>
+          <time>5.5</time>
+          <pose>0.5 9 0 0 0 -1.57</pose>
+        </waypoint>
+        <waypoint>
+          <time>9.5</time>
+          <pose>0 4 0 0 0 -1.57</pose>
+        </waypoint>
+        <waypoint>
+          <time>10</time>
+          <pose>0 4 0 0 0 0</pose>
+        </waypoint>
+        <waypoint>
+          <time>13</time>
+          <pose>5 4 0 0 0 0</pose>
+        </waypoint>
+        <waypoint>
+          <time>13.5</time>
+          <pose>5 4 0 0 0 1.57</pose>
+        </waypoint>
+        <waypoint>
+          <time>14.5</time>
+          <pose>5 5 0 0 0 1.57</pose>
+        </waypoint>
+        <waypoint>
+          <time>16.5</time>
+          <pose>5 5 0 0 0 0</pose>
+        </waypoint>
+        <waypoint>
+          <time>18.5</time>
+          <pose>8 5 0 0 0 0</pose>
+        </waypoint>
+        <waypoint>
+          <time>19</time>
+          <pose>8 5 0 0 0 1.57</pose>
+        </waypoint>
+        <waypoint>
+          <time>22.5</time>
+          <pose>8 9 0 0 0 1.57</pose>
+        </waypoint>
+        <waypoint>
+          <time>23</time>
+          <pose>7.5 9 0 0 0 3.14</pose>
+        </waypoint>
+      </trajectory>
+    </script>
+
+
+  <!-- Enable collisions -->
+  
+    <plugin name="attach_model" filename="libAttachModelPlugin.so">
+      <link>
+        <link_name>human_1_pose</link_name>
+        <model>
+          <model_name>human_1_collision_model</model_name>
+        </model>
+      </link>
+    </plugin>
+  
+
+</actor>
+
+  <model name="human_2_collision_model">
+    <pose>0 0 -100 0 0 0</pose>
+    <static>true</static>
+    <link name="link">
+      <collision name="link">
+        <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+        <geometry>
+          <box>
+            <size>0.44 1.62 0.60</size>
+          </box>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+  <actor name="human_2">
+    <!-- Starting pose, nice for when the world is reset -->
+    <pose>
+      4.0
+      9.0
+      1.0
+      1.570796
+      -0.0
+      3.141593
+    </pose>
+    <skin>
+      <filename>model://actor/meshes/SKIN_man_blue_shirt.dae</filename>
+    </skin>
+    <animation name="walking2">
+      <filename>model://actor/meshes/ANIMATION_walking.dae</filename>
+      <interpolate_x>true</interpolate_x>
+    </animation>
+    <script>
+      <trajectory id="2" type="walking2">
+        <waypoint>
+          <time>0</time>
+          <pose>4.0 9.0 0.0 0.0 0.0 -1.570796</pose>
+        </waypoint>
+        <waypoint>
+          <time>5</time>
+          <pose>4.0 3.0 0.0 0.0 0.0 -0.785398</pose>
+        </waypoint>
+        <waypoint>
+          <time>6.0</time>
+          <pose>6.0 2.0 0.0 0.0 0.0 0.0</pose>
+        </waypoint>
+        <waypoint>
+          <time>8.0</time>
+          <pose>8.0 2.0 0.0 0.0 0.0 0.0</pose>
+        </waypoint>
+        <waypoint>
+          <time>8.5</time>
+          <pose>8.0 2.0 0.0 0.0 0.0 -1.570796</pose>
+        </waypoint>
+        <waypoint>
+          <time>13.5</time>
+          <pose>8.0 -5.0 0.0 0.0 0.0 -1.570796</pose>
+        </waypoint>
+        <waypoint>
+          <time>14.5</time>
+          <pose>8.0 -4.5 0.0 0.0 0.0 3.141593</pose>
+        </waypoint>
+        <waypoint>
+          <time>18.5</time>
+          <pose>3.0 -5.0 0.0 0.0 0.0 3.141593</pose>
+        </waypoint>
+        <waypoint>
+          <time>19.5</time>
+          <pose>3.0 -5.0 0.0 0.0 0.0 2.356194</pose>
+        </waypoint>
+        <waypoint>
+          <time>22.5</time>
+          <pose>0.0 -4.0 0.0 0.0 0.0 2.356194</pose>
+        </waypoint>
+        <waypoint>
+          <time>23.5</time>
+          <pose>0.0 -4.0 0.0 0.0 0.0 0.785398</pose>
+        </waypoint>
+        <waypoint>
+          <time>25.5</time>
+          <pose>3.0 -3.0 0.0 0.0 0.0 0.0</pose>
+        </waypoint>
+        <waypoint>
+          <time>27.0</time>
+          <pose>6.0 -3.0 0.0 0.0 0.0 0.0</pose>
+        </waypoint>
+        <waypoint>
+          <time>28.0</time>
+          <pose>6.0 -3.0 0.0 0.0 0.0 1.570796</pose>
+        </waypoint>
+        <waypoint>
+          <time>30.0</time>
+          <pose>6.0 0.0 0.0 0.0 0.0 1.570796</pose>
+        </waypoint>
+        <waypoint>
+          <time>31.0</time>
+          <pose>6.0 0.0 0.0 0.0 0.0 2.356194</pose>
+        </waypoint>
+        <waypoint>
+          <time>33.0</time>
+          <pose>4.0 1.0 0.0 0.0 0.0 2.356194</pose>
+        </waypoint>
+        <waypoint>
+          <time>34.0</time>
+          <pose>4.0 1.0 0.0 0.0 0.0 1.570796</pose>
+        </waypoint>
+        <waypoint>
+          <time>38.0</time>
+          <pose>4.0 9.0 0.0 0.0 0.0 1.570796</pose>
+        </waypoint>
+      </trajectory>
+    </script>
+    <!-- Enable collisions -->
+    <plugin name="attach_model" filename="libAttachModelPlugin.so">
+      <link>
+        <link_name>human_2_pose</link_name>
+        <model>
+          <model_name>human_2_collision_model</model_name>
+        </model>
+      </link>
+    </plugin>
+  </actor>
+
+
+  <model name="human_3_collision_model">
+    <pose>0 0 -100 0 0 0</pose>
+    <static>true</static>
+    <link name="link">
+      <collision name="link">
+        <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+        <geometry>
+          <box>
+            <size>0.44 1.62 0.60</size>
+          </box>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+  <actor name="human_3">
+    <!-- Starting pose, nice for when the world is reset -->
+    <pose>
+      0.0
+      -2.0
+      1.0
+      1.570796
+      -0.0
+      3.141593
+    </pose>
+    <skin>
+      <filename>model://actor/meshes/SKIN_man_blue_shirt.dae</filename>
+    </skin>
+    <animation name="walking3">
+      <filename>model://actor/meshes/ANIMATION_walking.dae</filename>
+      <interpolate_x>true</interpolate_x>
+    </animation>
+    <script>
+      <trajectory id="3" type="walking3">
+        <waypoint>
+          <time>0</time>
+          <pose>0.0 -2.0 0.0 0.0 0.0 -0.785398</pose>
+        </waypoint>
+        <waypoint>
+          <time>3.0</time>
+          <pose>3.0 -4.0 0.0 0.0 0.0 -0.785398</pose>
+        </waypoint>
+        <waypoint>
+          <time>4.0</time>
+          <pose>3.0 -4.0 0.0 0.0 0.0 0.785398</pose>
+        </waypoint>
+        <waypoint>
+          <time>6.0</time>
+          <pose>5.0 -3.0 0.0 0.0 0.0 0.785398</pose>
+        </waypoint>
+        <waypoint>
+          <time>7.0</time>
+          <pose>5.0 -3.0 0.0 0.0 0.0 1.570796</pose>
+        </waypoint>
+        <waypoint>
+          <time>8.5</time>
+          <pose>5.0 -1.0 0.0 0.0 0.0 1.570796</pose>
+        </waypoint>
+        <waypoint>
+          <time>9.5</time>
+          <pose>5.0 -1.0 0.0 0.0 0.0 -2.356194</pose>
+        </waypoint>
+        <waypoint>
+          <time>11.0</time>
+          <pose>3.0 -2.0 0.0 0.0 0.0 -2.356194</pose>
+        </waypoint>
+        <waypoint>
+          <time>12.0</time>
+          <pose>3.0 -2.0 0.0 0.0 0.0 2.356194</pose>
+        </waypoint>
+        <waypoint>
+          <time>14.0</time>
+          <pose>1.0 -1.0 0.0 0.0 0.0 2.356194</pose>
+        </waypoint>
+        <waypoint>
+          <time>15.0</time>
+          <pose>1.0 -1.0 0.0 0.0 0.0 0.785398</pose>
+        </waypoint>
+        <waypoint>
+          <time>17.0</time>
+          <pose>3.0 1.0 0.0 0.0 0.0 0.785398</pose>
+        </waypoint>
+        <waypoint>
+          <time>18.0</time>
+          <pose>3.0 1.0 0.0 0.0 0.0 2.356194</pose>
+        </waypoint>
+        <waypoint>
+          <time>20.5</time>
+          <pose>0.0 3.0 0.0 0.0 0.0 2.356194</pose>
+        </waypoint>
+        <waypoint>
+          <time>21.5</time>
+          <pose>0.0 3.0 0.0 0.0 0.0 -1.570796</pose>
+        </waypoint>
+        <waypoint>
+          <time>24.5</time>
+          <pose>0.0 -2.0 0.0 0.0 0.0 -1.570796</pose>
+        </waypoint>
+        <waypoint>
+          <time>25.5</time>
+          <pose>0.0 -2.0 0.0 0.0 0.0 -0.785398</pose>
+        </waypoint>
+      </trajectory>
+    </script>
+    <!-- Enable collisions -->
+    <plugin name="attach_model" filename="libAttachModelPlugin.so">
+      <link>
+        <link_name>human_3_pose</link_name>
+        <model>
+          <model_name>human_3_collision_model</model_name>
+        </model>
+      </link>
+    </plugin>
+  </actor>
+
+  <model name="human_4_collision_model">
+    <pose>0 0 -100 0 0 0</pose>
+    <static>true</static>
+    <link name="link">
+      <collision name="link">
+        <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+        <geometry>
+          <box>
+            <size>0.44 1.62 0.60</size>
+          </box>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+  <actor name="human_4">
+    <!-- Starting pose, nice for when the world is reset -->
+    <pose>
+      2.0
+      4.0
+      1.0
+      -1.5707963267948966
+      -0.0
+      3.141593
+    </pose>
+    <skin>
+      <filename>model://actor/meshes/SKIN_man_blue_shirt.dae</filename>
+    </skin>
+    <animation name="walking4">
+      <filename>model://actor/meshes/ANIMATION_walking.dae</filename>
+      <interpolate_x>true</interpolate_x>
+    </animation>
+    <script>
+      <trajectory id="4" type="walking4">
+        <waypoint>
+          <time>0</time>
+          <pose>2.0 4.0 0.0 0.0 0.0 -1.570796</pose>
+        </waypoint>
+        <waypoint>
+          <time>10.0</time>
+          <pose>2.0 -4.5 0.0 0.0 0.0 -1.570796</pose>
+        </waypoint>
+        <waypoint>
+          <time>11.0</time>
+          <pose>2.0 -4.5 0.0 0.0 0.0 0</pose>
+        </waypoint>
+        <waypoint>
+          <time>12.0</time>
+          <pose>3.0 -4.5 0.0 0.0 0.0 0</pose>
+        </waypoint>
+        <waypoint>
+          <time>13.0</time>
+          <pose>3.0 -4.5 0.0 0.0 0.0 1.570796</pose>
+        </waypoint>
+        <waypoint>
+          <time>23.0</time>
+          <pose>3.0 4.0 0.0 0.0 0.0 1.570796</pose>
+        </waypoint>
+        <waypoint>
+          <time>24.0</time>
+          <pose>3.0 4.0 0.0 0.0 0.0 3.141593</pose>
+        </waypoint>
+        <waypoint>
+          <time>25.0</time>
+          <pose>2.0 4.0 0.0 0.0 0.0 3.141593</pose>
+        </waypoint>
+        <waypoint>
+          <time>26.0</time>
+          <pose>2.0 4.0 0.0 0.0 0.0 -1.570796</pose>
+        </waypoint>
+      </trajectory>
+    </script>
+    <!-- Enable collisions -->
+    <plugin name="attach_model" filename="libAttachModelPlugin.so">
+      <link>
+        <link_name>human_4_pose</link_name>
+        <model>
+          <model_name>human_4_collision_model</model_name>
+        </model>
+      </link>
+    </plugin>
+  </actor>
+
+ <model name="human_5_collision_model">
+    <pose>0 0 -100 0 0 0</pose>
+    <static>true</static>
+    <link name="link">
+      <collision name="link">
+        <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+        <geometry>
+          <box>
+            <size>0.44 1.62 0.60</size>
+          </box>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+  <actor name="human_5">
+    <!-- Starting pose, nice for when the world is reset -->
+    <pose>
+      8.0
+      3.0
+      1.0
+      -1.5707963267948966
+      -0.0
+      3.141593
+    </pose>
+    <skin>
+      <filename>model://actor/meshes/SKIN_man_blue_shirt.dae</filename>
+    </skin>
+    <animation name="walking5">
+      <filename>model://actor/meshes/ANIMATION_walking.dae</filename>
+      <interpolate_x>true</interpolate_x>
+    </animation>
+    <script>
+      <trajectory id="5" type="walking5">
+        <waypoint>
+          <time>0</time>
+          <pose>8.0 3.0 0.0 0.0 0.0 3.141593</pose>
+        </waypoint>
+        <waypoint>
+          <time>10.0</time>
+          <pose>1.0 3.0 0.0 0.0 0.0 3.141593</pose>
+        </waypoint>
+        <waypoint>
+          <time>11.0</time>
+          <pose>1.0 3.0 0.0 0.0 0.0 -1.570796</pose>
+        </waypoint>
+        <waypoint>
+          <time>12.0</time>
+          <pose>1.0 1.0 0.0 0.0 0.0 -1.570796</pose>
+        </waypoint>
+        <waypoint>
+          <time>13.0</time>
+          <pose>1.0 1.0 0.0 0.0 0.0 0</pose>
+        </waypoint>
+        <waypoint>
+          <time>23.0</time>
+          <pose>8.0 1.0 0.0 0.0 0.0 0</pose>
+        </waypoint>
+        <waypoint>
+          <time>24.0</time>
+          <pose>8.0 1.0 0.0 0.0 0.0 1.570796</pose>
+        </waypoint>
+        <waypoint>
+          <time>25.0</time>
+          <pose>8.0 3.0 0.0 0.0 0.0 1.570796</pose>
+        </waypoint>
+        <waypoint>
+          <time>26.0</time>
+          <pose>8.0 3.0 0.0 0.0 0.0 3.141593</pose>
+        </waypoint>
+      </trajectory>
+    </script>
+    <!-- Enable collisions -->
+    <plugin name="attach_model" filename="libAttachModelPlugin.so">
+      <link>
+        <link_name>human_5_pose</link_name>
+        <model>
+          <model_name>human_5_collision_model</model_name>
+        </model>
+      </link>
+    </plugin>
+  </actor>
+
+<!-- <actor name="human_56677">
+  <pose>
+    1.0
+    0.0
+    0.0
+    0.0
+    0.0
+    -1.188157022435626
+  </pose>
+
+  <link name="link">
+    <collision name="box">
+      <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+      <geometry>
+        <box>
+          <size>0.76 0.33 1.77</size>
+        </box>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <pose>0 0 0.02 0.04 0 0</pose>
+      <geometry>
+        <mesh>
+          <uri>model://elegant_male/meshes/elegant_male.dae</uri>
+        </mesh>
+      </geometry>
+    </visual>
+  </link>
+
+</actor> -->
+
+    <!-- Guest -->
+<!--     <model name="human_4_collision_model">
+      <pose>0 0 -100 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="link">
+          <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+          <geometry>
+            <box>
+              <size>0.44 1.62 0.60</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <actor name="human_4"> -->
+
+      <!-- Starting pose, nice for when the world is reset -->
+<!--       <pose>
+        4.0
+        0.0
+        0.0
+        0.0
+        0.0
+        0.0
+      </pose>
+
+      <skin>
+        <filename>model://actor/meshes/SKIN_man_blue_shirt.dae</filename>
+      </skin>
+
+      <animation name="animation">
+        <filename>model://actor/meshes/ANIMATION_walking.dae</filename>
+      </animation> -->
+      <!-- Need one waypoint to idle at -->
+<!--       <script>
+        <trajectory id='4' type='animation'>
+          <waypoint>
+            <time>100</time>
+              <pose>
+                4.0
+                0.0
+                0.0
+                0.0
+                0.0
+                0.0
+              </pose>
+          </waypoint>
+        </trajectory>
+      </script>
+      <plugin name="attach_model" filename="libAttachModelPlugin.so">
+        <link>
+          <link_name>human_4_pose</link_name>
+          <model>
+            <model_name>human_4_collision_model</model_name>
+          </model>
+        </link>
+      </plugin>
+    </actor> -->
+
+    <!-- Guest -->
+<!--     <model name="human_5_collision_model">
+      <pose>0 0 -100 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="link">
+          <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+          <geometry>
+            <box>
+              <size>0.44 1.62 0.60</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <actor name="human_5"> -->
+
+      <!-- Starting pose, nice for when the world is reset -->
+<!--       <pose>
+        2.0
+        3.0
+        0.0
+        0.0
+        0.0
+        1.5707963267948966
+      </pose>
+
+      <skin>
+        <filename>model://actor/meshes/SKIN_man_blue_shirt.dae</filename>
+      </skin>
+
+      <animation name="animation">
+        <filename>model://actor/meshes/ANIMATION_walking.dae</filename>
+      </animation> -->
+      <!-- Need one waypoint to idle at -->
+<!--       <script>
+        <trajectory id='5' type='animation'>
+          <waypoint>
+            <time>100</time>
+              <pose>
+                2.0
+                3.0
+                0.0
+                0.0
+                0.0
+                1.5707963267948966
+              </pose>
+          </waypoint>
+        </trajectory>
+      </script>
+      <plugin name="attach_model" filename="libAttachModelPlugin.so">
+        <link>
+          <link_name>human_5_pose</link_name>
+          <model>
+            <model_name>human_5_collision_model</model_name>
+          </model>
+        </link>
+      </plugin>
+    </actor> -->
+
+    <!-- Guest -->
+    <model name="human_6_collision_model">
+      <pose>0 0 -100 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="link">
+          <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+          <geometry>
+            <box>
+              <size>0.44 1.62 0.60</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <actor name="human_6">
+
+      <!-- Starting pose, nice for when the world is reset -->
+      <pose>
+        1.0
+        -2.0
+        0.0
+        0.0
+        0.0
+        -1.5707963267948966
+      </pose>
+
+      <skin>
+        <filename>model://actor/meshes/SKIN_man_blue_shirt.dae</filename>
+      </skin>
+
+      <animation name="animation">
+        <filename>model://actor/meshes/ANIMATION_walking.dae</filename>
+      </animation>
+      <!-- Need one waypoint to idle at -->
+      <script>
+        <trajectory id='6' type='animation'>
+          <waypoint>
+            <time>100</time>
+              <pose>
+                1.0
+                -2.0
+                0.0
+                0.0
+                0.0
+                -1.5707963267948966
+              </pose>
+          </waypoint>
+        </trajectory>
+      </script>
+      <plugin name="attach_model" filename="libAttachModelPlugin.so">
+        <link>
+          <link_name>human_6_pose</link_name>
+          <model>
+            <model_name>human_6_collision_model</model_name>
+          </model>
+        </link>
+      </plugin>
+    </actor>
+
+    <!-- Guest -->
+    <model name="human_7_collision_model">
+      <pose>0 0 -100 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="link">
+          <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+          <geometry>
+            <box>
+              <size>0.44 1.62 0.60</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <actor name="human_7">
+
+      <!-- Starting pose, nice for when the world is reset -->
+      <pose>
+        2.5
+        -0.5
+        0.0
+        0.0
+        0.0
+        -1.5707963267948966
+      </pose>
+
+      <skin>
+        <filename>model://actor/meshes/SKIN_man_green_shirt.dae</filename>
+      </skin>
+
+      <animation name="animation">
+        <filename>model://actor/meshes/ANIMATION_walking.dae</filename>
+      </animation>
+      <!-- Need one waypoint to idle at -->
+      <script>
+        <trajectory id='7' type='animation'>
+          <waypoint>
+            <time>100</time>
+              <pose>
+                2.5
+                -0.5
+                0.0
+                0.0
+                0.0
+                -1.5707963267948966
+              </pose>
+          </waypoint>
+        </trajectory>
+      </script>
+      <plugin name="attach_model" filename="libAttachModelPlugin.so">
+        <link>
+          <link_name>human_7_pose</link_name>
+          <model>
+            <model_name>human_7_collision_model</model_name>
+          </model>
+        </link>
+      </plugin>
+    </actor>
+    <!-- Guest -->
+    <model name="human_8_collision_model">
+      <pose>0 0 -100 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="link">
+          <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+          <geometry>
+            <box>
+              <size>0.44 1.62 0.60</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <actor name="human_8">
+
+      <!-- Starting pose, nice for when the world is reset -->
+      <pose>
+        1.5
+        1.5
+        0.0
+        0.0
+        0.0
+        0.0
+      </pose>
+
+      <skin>
+        <filename>model://actor/meshes/SKIN_man_green_shirt.dae</filename>
+      </skin>
+
+      <animation name="animation">
+        <filename>model://actor/meshes/ANIMATION_walking.dae</filename>
+      </animation>
+      <!-- Need one waypoint to idle at -->
+      <script>
+        <trajectory id='8' type='animation'>
+          <waypoint>
+            <time>100</time>
+              <pose>
+                1.5
+                1.5
+                0.0
+                0.0
+                0.0
+                0.0
+              </pose>
+          </waypoint>
+        </trajectory>
+      </script>
+      <plugin name="attach_model" filename="libAttachModelPlugin.so">
+        <link>
+          <link_name>human_8_pose</link_name>
+          <model>
+            <model_name>human_8_collision_model</model_name>
+          </model>
+        </link>
+      </plugin>
+    </actor>
+    <!-- Guest -->
+    <model name="human_9_collision_model">
+      <pose>0 0 -100 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="link">
+          <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+          <geometry>
+            <box>
+              <size>0.44 1.62 0.60</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <actor name="human_9">
+
+      <!-- Starting pose, nice for when the world is reset -->
+      <pose>
+        5.5
+        1.5
+        0.0
+        0.0
+        0.0
+        1.5707963267948966
+      </pose>
+
+      <skin>
+        <filename>model://actor/meshes/SKIN_man_green_shirt.dae</filename>
+      </skin>
+
+      <animation name="animation">
+        <filename>model://actor/meshes/ANIMATION_walking.dae</filename>
+      </animation>
+      <!-- Need one waypoint to idle at -->
+      <script>
+        <trajectory id='9' type='animation'>
+          <waypoint>
+            <time>100</time>
+              <pose>
+                5.5
+                1.5
+                0.0
+                0.0
+                0.0
+                1.5707963267948966
+              </pose>
+          </waypoint>
+        </trajectory>
+      </script>
+      <plugin name="attach_model" filename="libAttachModelPlugin.so">
+        <link>
+          <link_name>human_9_pose</link_name>
+          <model>
+            <model_name>human_9_collision_model</model_name>
+          </model>
+        </link>
+      </plugin>
+    </actor>
+    <!-- Guest -->
+    <model name="human_10_collision_model">
+      <pose>0 0 -100 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="link">
+          <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+          <geometry>
+            <box>
+              <size>0.44 1.62 0.60</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <actor name="human_10">
+
+      <!-- Starting pose, nice for when the world is reset -->
+      <pose>
+        3.5
+        -2.5
+        0.0
+        0.0
+        0.0
+        3.141593
+      </pose>
+
+      <skin>
+        <filename>model://actor/meshes/SKIN_man_green_shirt.dae</filename>
+      </skin>
+
+      <animation name="animation">
+        <filename>model://actor/meshes/ANIMATION_walking.dae</filename>
+      </animation>
+      <!-- Need one waypoint to idle at -->
+      <script>
+        <trajectory id='10' type='animation'>
+          <waypoint>
+            <time>100</time>
+              <pose>
+                3.5
+                -2.5
+                0.0
+                0.0
+                0.0
+                3.141593
+              </pose>
+          </waypoint>
+        </trajectory>
+      </script>
+      <plugin name="attach_model" filename="libAttachModelPlugin.so">
+        <link>
+          <link_name>human_10_pose</link_name>
+          <model>
+            <model_name>human_10_collision_model</model_name>
+          </model>
+        </link>
+      </plugin>
+    </actor>
+    <!-- Guest -->
+<!--     <model name="human_11_collision_model">
+      <pose>0 0 -100 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="link">
+          <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+          <geometry>
+            <box>
+              <size>0.44 1.62 0.60</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <actor name="human_11"> -->
+
+      <!-- Starting pose, nice for when the world is reset -->
+<!--       <pose>
+        1.0
+        -4.0
+        0.0
+        0.0
+        0.0
+        3.141593
+      </pose>
+
+      <skin>
+        <filename>model://actor/meshes/SKIN_man_green_shirt.dae</filename>
+      </skin>
+
+      <animation name="animation">
+        <filename>model://actor/meshes/ANIMATION_walking.dae</filename>
+      </animation> -->
+      <!-- Need one waypoint to idle at -->
+<!--       <script>
+        <trajectory id='11' type='animation'>
+          <waypoint>
+            <time>100</time>
+              <pose>
+                1.0
+                -4.0
+                0.0
+                0.0
+                0.0
+                3.141593
+              </pose>
+          </waypoint>
+        </trajectory>
+      </script>
+      <plugin name="attach_model" filename="libAttachModelPlugin.so">
+        <link>
+          <link_name>human_11_pose</link_name>
+          <model>
+            <model_name>human_11_collision_model</model_name>
+          </model>
+        </link>
+      </plugin>
+    </actor> -->
+    <!-- Guest -->
+<!--     <model name="human_13_collision_model">
+      <pose>0 0 -100 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="link">
+          <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+          <geometry>
+            <box>
+              <size>0.44 1.62 0.60</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <actor name="human_13"> -->
+
+      <!-- Starting pose, nice for when the world is reset -->
+<!--       <pose>
+        5.0
+        -2.0
+        0.0
+        0.0
+        0.0
+        3.141593
+      </pose>
+
+      <skin>
+        <filename>model://actor/meshes/SKIN_man_green_shirt.dae</filename>
+      </skin>
+
+      <animation name="animation">
+        <filename>model://actor/meshes/ANIMATION_walking.dae</filename>
+      </animation> -->
+      <!-- Need one waypoint to idle at -->
+<!--       <script>
+        <trajectory id='13' type='animation'>
+          <waypoint>
+            <time>100</time>
+              <pose>
+                5.0
+                -2.0
+                0.0
+                0.0
+                0.0
+                3.141593
+              </pose>
+          </waypoint>
+        </trajectory>
+      </script>
+      <plugin name="attach_model" filename="libAttachModelPlugin.so">
+        <link>
+          <link_name>human_13_pose</link_name>
+          <model>
+            <model_name>human_13_collision_model</model_name>
+          </model>
+        </link>
+      </plugin>
+    </actor> -->
+    <!-- Guest -->
+<!--     <model name="human_14_collision_model">
+      <pose>0 0 -100 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="link">
+          <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+          <geometry>
+            <box>
+              <size>0.44 1.62 0.60</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <actor name="human_14"> -->
+
+      <!-- Starting pose, nice for when the world is reset -->
+<!--       <pose>
+        3.5
+        1.5
+        0.0
+        0.0
+        0.0
+        3.141593
+      </pose>
+
+      <skin>
+        <filename>model://actor/meshes/SKIN_man_green_shirt.dae</filename>
+      </skin>
+
+      <animation name="animation">
+        <filename>model://actor/meshes/ANIMATION_walking.dae</filename>
+      </animation> -->
+      <!-- Need one waypoint to idle at -->
+<!--       <script>
+        <trajectory id='14' type='animation'>
+          <waypoint>
+            <time>100</time>
+              <pose>
+                3.5
+                1.5
+                0.0
+                0.0
+                0.0
+                3.141593
+              </pose>
+          </waypoint>
+        </trajectory>
+      </script>
+      <plugin name="attach_model" filename="libAttachModelPlugin.so">
+        <link>
+          <link_name>human_14_pose</link_name>
+          <model>
+            <model_name>human_14_collision_model</model_name>
+          </model>
+        </link>
+      </plugin>
+    </actor> -->
+    <!-- Guest -->
+<!--     <model name="human_15_collision_model">
+      <pose>0 0 -100 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="link">
+          <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+          <geometry>
+            <box>
+              <size>0.44 1.62 0.60</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <actor name="human_15"> -->
+
+      <!-- Starting pose, nice for when the world is reset -->
+     <!--  <pose>
+        7.5
+        2.5
+        0.0
+        0.0
+        0.0
+        3.141593
+      </pose>
+
+      <skin>
+        <filename>model://actor/meshes/SKIN_man_green_shirt.dae</filename>
+      </skin>
+
+      <animation name="animation">
+        <filename>model://actor/meshes/ANIMATION_walking.dae</filename>
+      </animation> -->
+      <!-- Need one waypoint to idle at -->
+<!--       <script>
+        <trajectory id='15' type='animation'>
+          <waypoint>
+            <time>100</time>
+              <pose>
+                7.5
+                2.5
+                0.0
+                0.0
+                0.0
+                3.141593
+              </pose>
+          </waypoint>
+        </trajectory>
+      </script>
+      <plugin name="attach_model" filename="libAttachModelPlugin.so">
+        <link>
+          <link_name>human_15_pose</link_name>
+          <model>
+            <model_name>human_15_collision_model</model_name>
+          </model>
+        </link>
+      </plugin>
+    </actor> -->
+    <!-- Guest -->
+<!--     <model name="human_16_collision_model">
+      <pose>0 0 -100 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="link">
+          <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+          <geometry>
+            <box>
+              <size>0.44 1.62 0.60</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <actor name="human_16"> -->
+
+      <!-- Starting pose, nice for when the world is reset -->
+<!--       <pose>
+        0.0
+        3.0
+        0.0
+        0.0
+        0.0
+        -1.5707963267948966
+      </pose>
+
+      <skin>
+        <filename>model://actor/meshes/SKIN_man_green_shirt.dae</filename>
+      </skin>
+
+      <animation name="animation">
+        <filename>model://actor/meshes/ANIMATION_walking.dae</filename>
+      </animation> -->
+      <!-- Need one waypoint to idle at -->
+   <!--    <script>
+        <trajectory id='16' type='animation'>
+          <waypoint>
+            <time>100</time>
+              <pose>
+                0.0
+                3.0
+                0.0
+                0.0
+                0.0
+                -1.5707963267948966
+              </pose>
+          </waypoint>
+        </trajectory>
+      </script>
+      <plugin name="attach_model" filename="libAttachModelPlugin.so">
+        <link>
+          <link_name>human_16_pose</link_name>
+          <model>
+            <model_name>human_16_collision_model</model_name>
+          </model>
+        </link>
+      </plugin>
+    </actor> -->
+    <!-- Guest -->
+    <model name="human_17_collision_model">
+      <pose>0 0 -100 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="link">
+          <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+          <geometry>
+            <box>
+              <size>0.44 1.62 0.60</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <actor name="human_17">
+
+      <!-- Starting pose, nice for when the world is reset -->
+      <pose>
+        3.5
+        4.5
+        0.0
+        0.0
+        0.0
+        1.5707963267948966
+      </pose>
+
+      <skin>
+        <filename>model://actor/meshes/SKIN_man_green_shirt.dae</filename>
+      </skin>
+
+      <animation name="animation">
+        <filename>model://actor/meshes/ANIMATION_walking.dae</filename>
+      </animation>
+      <!-- Need one waypoint to idle at -->
+      <script>
+        <trajectory id='17' type='animation'>
+          <waypoint>
+            <time>100</time>
+              <pose>
+                3.5
+                4.5
+                0.0
+                0.0
+                0.0
+                1.5707963267948966
+              </pose>
+          </waypoint>
+        </trajectory>
+      </script>
+      <plugin name="attach_model" filename="libAttachModelPlugin.so">
+        <link>
+          <link_name>human_17_pose</link_name>
+          <model>
+            <model_name>human_17_collision_model</model_name>
+          </model>
+        </link>
+      </plugin>
+    </actor>
+    <!-- Guest -->
+<!--     <model name="human_20_collision_model">
+      <pose>0 0 -100 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="link">
+          <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+          <geometry>
+            <box>
+              <size>0.44 1.62 0.60</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <actor name="human_20"> -->
+
+      <!-- Starting pose, nice for when the world is reset -->
+<!--       <pose>
+        0.5
+        8.5
+        0.0
+        0.0
+        0.0
+        -1.5707963267948966
+      </pose>
+
+      <skin>
+        <filename>model://actor/meshes/SKIN_man_green_shirt.dae</filename>
+      </skin>
+
+      <animation name="animation">
+        <filename>model://actor/meshes/ANIMATION_walking.dae</filename>
+      </animation> -->
+      <!-- Need one waypoint to idle at -->
+<!--       <script>
+        <trajectory id='20' type='animation'>
+          <waypoint>
+            <time>100</time>
+              <pose>
+                0.5
+                8.5
+                0.0
+                0.0
+                0.0
+                -1.5707963267948966
+              </pose>
+          </waypoint>
+        </trajectory>
+      </script>
+      <plugin name="attach_model" filename="libAttachModelPlugin.so">
+        <link>
+          <link_name>human_20_pose</link_name>
+          <model>
+            <model_name>human_20_collision_model</model_name>
+          </model>
+        </link>
+      </plugin>
+    </actor> -->
+    <!-- Guest -->
+    <model name="human_21_collision_model">
+      <pose>0 0 -100 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="link">
+          <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+          <geometry>
+            <box>
+              <size>0.44 1.62 0.60</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <actor name="human_21">
+
+      <!-- Starting pose, nice for when the world is reset -->
+      <pose>
+        3.5
+        8.5
+        0.0
+        0.0
+        0.0
+        3.141593
+      </pose>
+
+      <skin>
+        <filename>model://actor/meshes/SKIN_man_green_shirt.dae</filename>
+      </skin>
+
+      <animation name="animation">
+        <filename>model://actor/meshes/ANIMATION_walking.dae</filename>
+      </animation>
+      <!-- Need one waypoint to idle at -->
+      <script>
+        <trajectory id='21' type='animation'>
+          <waypoint>
+            <time>100</time>
+              <pose>
+                3.5
+                8.5
+                0.0
+                0.0
+                0.0
+                3.141593
+              </pose>
+          </waypoint>
+        </trajectory>
+      </script>
+      <plugin name="attach_model" filename="libAttachModelPlugin.so">
+        <link>
+          <link_name>human_21_pose</link_name>
+          <model>
+            <model_name>human_21_collision_model</model_name>
+          </model>
+        </link>
+      </plugin>
+    </actor>
+    <!-- Guest -->
+<!--     <model name="human_22_collision_model">
+      <pose>0 0 -100 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="link">
+          <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+          <geometry>
+            <box>
+              <size>0.44 1.62 0.60</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <actor name="human_22"> -->
+
+      <!-- Starting pose, nice for when the world is reset -->
+<!--       <pose>
+        3.5
+        8.5
+        0.0
+        0.0
+        0.0
+        3.141593
+      </pose>
+
+      <skin>
+        <filename>model://actor/meshes/SKIN_man_green_shirt.dae</filename>
+      </skin>
+
+      <animation name="animation">
+        <filename>model://actor/meshes/ANIMATION_walking.dae</filename>
+      </animation> -->
+      <!-- Need one waypoint to idle at -->
+<!--       <script>
+        <trajectory id='22' type='animation'>
+          <waypoint>
+            <time>100</time>
+              <pose>
+                3.5
+                8.5
+                0.0
+                0.0
+                0.0
+                3.141593
+              </pose>
+          </waypoint>
+        </trajectory>
+      </script>
+      <plugin name="attach_model" filename="libAttachModelPlugin.so">
+        <link>
+          <link_name>human_22_pose</link_name>
+          <model>
+            <model_name>human_22_collision_model</model_name>
+          </model>
+        </link>
+      </plugin>
+    </actor> -->
+    <!-- Guest -->
+<!--     <model name="human_23_collision_model">
+      <pose>0 0 -100 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="link">
+          <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+          <geometry>
+            <box>
+              <size>0.44 1.62 0.60</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <actor name="human_23"> -->
+
+      <!-- Starting pose, nice for when the world is reset -->
+     <!--  <pose>
+        7.5
+        8.5
+        0.0
+        0.0
+        0.0
+        3.141593
+      </pose>
+
+      <skin>
+        <filename>model://actor/meshes/SKIN_man_green_shirt.dae</filename>
+      </skin>
+
+      <animation name="animation">
+        <filename>model://actor/meshes/ANIMATION_walking.dae</filename>
+      </animation> -->
+      <!-- Need one waypoint to idle at -->
+<!--       <script>
+        <trajectory id='23' type='animation'>
+          <waypoint>
+            <time>100</time>
+              <pose>
+                7.5
+                8.5
+                0.0
+                0.0
+                0.0
+                3.141593
+              </pose>
+          </waypoint>
+        </trajectory>
+      </script>
+      <plugin name="attach_model" filename="libAttachModelPlugin.so">
+        <link>
+          <link_name>human_23_pose</link_name>
+          <model>
+            <model_name>human_23_collision_model</model_name>
+          </model>
+        </link>
+      </plugin>
+    </actor> -->
+  </world>
+</sdf>
