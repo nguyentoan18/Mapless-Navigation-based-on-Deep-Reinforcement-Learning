@@ -1,15 +1,4 @@
 #!/usr/bin/env python
-#================================================================
-#
-#   File name   : LunarLander-v2_PPO.py
-#   Author      : PyLessons
-#   Created date: 2020-10-10
-#   Website     : https://pylessons.com/
-#   GitHub      : https://github.com/pythonlessons/Reinforcement_Learning
-#   Description : LunarLander-v2 PPO discrete agent
-#   TensorFlow  : 2.3.1
-#
-#================================================================
 import os
 os.environ['CUDA_VISIBLE_DEVICES'] = '0' # -1:cpu, 0:first gpu
 import random
