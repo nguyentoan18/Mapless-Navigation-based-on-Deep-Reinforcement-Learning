@@ -1,7 +1,7 @@
 # Mapless-Navigation-based-on-Deep-Reinforcement-Learning
 
 ## Abstract
-This work builds an Autonomous Mobile Robot simulation and training environment for the Mapless Navigation based on Deep Reinforcement Learning problem.
+This work builds an Autonomous Mobile Robot simulation and training environment for the Mapless Navigation based on Deep Reinforcement Learning.
 - _**Performance indicator definition:**_ Given a number of destinations that exist in a limited space, it is a value that expresses the degree of success in reaching the destination sequentially as a percentage, and the unit is expressed as ‘%’.
 - _**Evaluation method:**_ After setting N sequential destinations within a limited space, the number of times reaching the olfactory destination within a certain range (within a maximum of 30 cm) is measured and calculated as a percentage.
 - _**Success rate:**_ 95% in the real environment
